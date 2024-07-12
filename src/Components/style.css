@@ -1,0 +1,49 @@
+.right h1{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.support{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-family: arial;
+}
+.support img{
+    height: 210px;
+    width: 280px;
+}
+.support a{
+    font-size: 16px;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.support a img{
+    height: 50px;
+    width: 50px;
+}
+.Refer{
+    background-color: #474747;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+.Refer-top{
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.Refer-top img{
+    height: 212px;
+    width: 226px;
+}
