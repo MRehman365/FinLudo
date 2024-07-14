@@ -1,8 +1,8 @@
 // Navbar.js
-
+import { LiaRupeeSignSolid } from "react-icons/lia";
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FiMenu } from 'react-icons/fi'; // Example icon from react-icons
+import { BiMenuAltLeft } from "react-icons/bi";
 import logo from './Assets/vplay-logo.png'
 import './Navbar.css'; // Import your CSS file
 import profile from './Assets/Avatar2.png'
@@ -14,6 +14,8 @@ import Refer from './Assets/sidebar-referEarn.png'
 import Download from './Assets/dw.png'
 import Notification from './Assets/sidebar-notifications.png'
 import Support from './Assets/sidebar-support.png'
+import money from './Assets/global-rupeeIcon.png'
+import bag from './Assets/notification2.png'
 
 
 const Navbar = () => {
@@ -26,39 +28,50 @@ const Navbar = () => {
   return (
     <>
     <nav className={`navbar ${isOpen ? 'open' : ''}`}>
-      <div className="top-section">
-        <div className="logo">
+      <div className="top-section flex justify-around">
+        <div className="logo flex gap-5">
+        <button className="menu-toggle" onClick={toggleNavbar}>
+        <BiMenuAltLeft />
+        </button>
           {/* Your logo image or text */}
           <Link to="/"><img src={logo} alt="" /></Link>
         </div>
-        <button className="menu-toggle" onClick={toggleNavbar}>
-          <FiMenu />
-        </button>
+        <div className="flex gap-3">
+          <div className="h-[30px] border-[#797979cc] border rounded bg-[#e7e7e7cc] flex items-center p-4  gap-2">
+            <div><img src={money} alt="" className="w-[20px]" /></div>
+            <div className="flex items-center font-medium justify-center flex-col"><p className="text-[12px] text-[#5c5c5c]">cash</p><p className="text-[12px] font-medium text-[#5c5c5c] flex items-center"><LiaRupeeSignSolid />0</p></div>
+          </div>
+          <div className="h-[30px] border-[#797979cc] border rounded bg-[#e7e7e7cc] flex items-center p-4  gap-2">
+            <div><img src={bag} alt="" className="w-[20px]" /></div>
+            <div className="flex items-center font-medium justify-center flex-col"><p className="text-[12px] text-[#5c5c5c]">Earning</p><p className="text-[12px] font-medium text-[#5c5c5c] flex items-center"><LiaRupeeSignSolid />0</p></div>
+          </div>
+        </div>
+        
       </div>
       <ul className="menu">
         {/* Example list of menu items */}
         <li>
-          <Link to="/menu1">
+          <Link to="/profile">
            <span className='menu-name'><img src={profile} alt="" /> My Profile</span> <span className="arrow">➔</span>
           </Link>
         </li>
         <li>
-          <Link to="/menu2">
+          <Link to="/">
           <span className='menu-name'><img src={Win} alt="" /> Win Cash</span> <span className="arrow">➔</span>
           </Link>
         </li>
         <li>
-          <Link to="/menu3">
+          <Link to="/wallet">
           <span className='menu-name'><img src={Wallet} alt="" /> My Wallet</span> <span className="arrow">➔</span>
           </Link>
         </li>
         <li>
-          <Link to="/menu4">
+          <Link to="/game-history">
           <span className='menu-name'><img src={Games} alt="" /> Games History</span> <span className="arrow">➔</span>
           </Link>
         </li>
         <li>
-          <Link to="/menu5">
+          <Link to="/transacion">
           <span className='menu-name'><img src={Transctions} alt="" /> Transctions History</span> <span className="arrow">➔</span>
           </Link>
         </li>
@@ -68,12 +81,12 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/menu7">
+          <Link to="/refer-history">
           <span className='menu-name'><img src={Refer} alt="" />Referral History</span> <span className="arrow">➔</span>
           </Link>
         </li>
         <li>
-          <Link to="/menu8">
+          <Link to="/alert">
           <span className='menu-name'><img src={Notification} alt="" />Notification</span> <span className="arrow">➔</span>
           </Link>
         </li>

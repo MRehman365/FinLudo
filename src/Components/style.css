@@ -18,7 +18,7 @@
     width: 280px;
 }
 .support a{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     color: #007bff;
     text-decoration: none;
@@ -26,11 +26,10 @@
     align-items: center;
 }
 .support a img{
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 30px;
 }
 .Refer{
-    background-color: #474747;
     display: flex;
     flex-direction: column;
     height: auto;

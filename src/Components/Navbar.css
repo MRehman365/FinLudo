@@ -28,14 +28,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0px;
+    padding: 10px 25px;
     background-color: #ffffff; /* Adjust background color as needed */
     /* Ensure top section is above navbar */
   }
   
   .logo img{
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
   }
   
   .menu-toggle {
@@ -112,7 +112,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 10px 0px;
+        padding: 10px 15px;
         background-color: #ffffff;
       }
     
